@@ -541,8 +541,8 @@ public class QRScanner extends CordovaPlugin implements BarcodeCallback {
         int _h = displayMetrics.heightPixels;
         int _l = 0;
         int _t = 0;
-        if (marginLeft != -1) _l  = (int)Math.round(((double)_w) * marginLeft) - 0;
-        if (marginTop != -1)  _t  = (int)Math.round(((double)_h) * marginTop) - 6;
+        if (marginLeft != -1) _l  = (int)Math.round(((double)_w) * marginLeft);
+        if (marginTop != -1)  _t  = (int)Math.round(((double)_h) * marginTop);
         if (height != -1)     _h  = (int)Math.round(((double)_h) * height);
         if (height != -1)     _w  = (int)Math.round(((double)_w) * width);
         final int w = _w;
