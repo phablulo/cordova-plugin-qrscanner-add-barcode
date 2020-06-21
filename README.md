@@ -21,34 +21,6 @@ Tested with: cordova-android: 8.1.0, cordova-ios: 5.1.1
 </platform>
 <preference name="UseSwiftLanguageVersion" value="5" ></preference>
 ```
+## TODO
 
-
-## Change in Android
-PATH: ⁨app/⁨src/⁨main/⁨java/⁨com/⁨bitpay/⁨cordova/⁨qrscanner⁩/QRScanner.java
-
-Avaiable Code Format: https://zxing.github.io/zxing/apidocs/com/google/zxing/BarcodeFormat.html
-```
-// LINE1
-formatList.add(BarcodeFormat.EAN_13);
-formatList.add(BarcodeFormat.CODE_128);
-formatList.add(BarcodeFormat.CODE_39);
-```
-
-## Change in iOS
-PATH: [APP_NAME]/⁨Plugins/⁨cordova-plugin-qrscanner/QRScanner.swift
-
-Avaiable Code Format: https://developer.apple.com/documentation/avfoundation/avmetadataobject/objecttype
-
-```
-// LINE 1
-metaOutput!.metadataObjectTypes = [AVMetadataObject.ObjectType.qr, AVMetadataObject.ObjectType.ean13, AVMetadataObject.ObjectType.code128, AVMetadataObject.ObjectType.code39] //ADDED BY SONIC
-```
-```
-// LINE 2
-if ((found.type == AVMetadataObject.ObjectType.qr || found.type == AVMetadataObject.ObjectType.ean13 || found.type == AVMetadataObject.ObjectType.code128 || found.type == AVMetadataObject.ObjectType.code39) && found.stringValue != nil) { //ADDED BY SONIC
-```
-
-## Copyright
-Original source code (QRScanner.java, QRScanner.swift) copyright by bitpay:
-
-https://github.com/bitpay/cordova-plugin-qrscanner/
+- add methods to change camera bounds on iOS.
